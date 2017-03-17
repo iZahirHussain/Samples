@@ -1,0 +1,8 @@
+c:\users\zhussai\documents\visual studio 2012\Projects\CSharp\CSharp\bin\Debug\CSharp.exe
+c:\users\zhussai\documents\visual studio 2012\Projects\CSharp\CSharp\bin\Debug\CSharp.pdb
+c:\users\zhussai\documents\visual studio 2012\Projects\CSharp\CSharp\obj\Debug\CSharp.exe
+c:\users\zhussai\documents\visual studio 2012\Projects\CSharp\CSharp\obj\Debug\CSharp.pdb
+C:\Users\zhussai\Documents\Visual Studio 2012\Projects\CSharp\CSharp\obj\Debug\CSharp.csprojResolveAssemblyReference.cache
+C:\Users\zhussai\Documents\Visual Studio 2012\Projects\CSharp\CSharp\bin\Debug\CSharp.exe.config
+C:\Users\zhussai\Documents\Visual Studio 2012\Projects\CSharp\CSharp\bin\Debug\EntityFramework.dll
+C:\Users\zhussai\Documents\Visual Studio 2012\Projects\CSharp\CSharp\bin\Debug\EntityFramework.xml
