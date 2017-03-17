@@ -1,0 +1,109 @@
+﻿    <!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<style>
+table.code, table.spec, table.results, table.compile, table.summary
+{
+    margin-left: 4em;
+    border: 1px solid #000000;
+    padding: 4px;
+}
+
+table.code
+{
+    background-color: #e5e5e5;
+}
+
+table.spec
+{
+    background-color: #aaddff;
+}
+
+table.results
+{
+    background-color: #aaeeaa;
+}
+
+table.compile
+{
+    background-color: #ffaaaa;
+}
+
+table.summary
+{
+    background-color: #ffffff;
+}
+
+div.code, div.output
+{
+  border-right: white 2px ridge; 
+  padding-right: 10px; 
+  border-top: white 2px ridge; 
+  padding-left: 10px; 
+  font-size: 10pt; 
+  padding-bottom: 10px; 
+  margin: 10px; 
+  border-left: white 2px ridge; 
+  padding-top: 10px; 
+  border-bottom: white 2px ridge; 
+  font-family: courier new; 
+  background-color: #e5e5e5;
+}
+
+/* For code snippets */
+
+span.Keyword,span.Linq,span.ReferenceType,span.ValueType,span.Modifier,span.Statement,
+span.MethodParameter,span.Namespace,span.DataType,span.Function,span.Method,
+span.Object,span.Operator,span.Property,span.SysTable,span.SysSproc,
+span.GlobalVariable,span.ReservedKeyword,span.SystemFunction,span.Type,
+span.PreProcessorDirective, span.Element
+{
+    color: #0000cc
+}
+
+span.BlockComment,span.XmlComment,span.InlineComment,span.JavaDoc
+{
+    color: green
+}
+
+span.String
+{
+    color: black
+}
+
+span.Attention
+{
+    font-weight: bold;
+    color: red
+}
+
+span.Entity
+{
+    color: red
+}
+
+</style>
+<div class="code">
+<span class="Modifier">abstract</span>&nbsp;<span class="Modifier">public</span>&nbsp;<span class="ReferenceType">class</span>&nbsp;AbstractClass<br />
+&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">abstract</span>&nbsp;<span class="Modifier">public</span>&nbsp;<span class="ValueType">void</span>&nbsp;AbstractExample();<br />
+&nbsp;&nbsp;&nbsp;}<br />
+<br />
+&nbsp;&nbsp;&nbsp;<span class="Modifier">public</span>&nbsp;<span class="ReferenceType">class</span>&nbsp;AbstractTest:AbstractClass<br />
+&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="InlineComment">//The&nbsp;Method&nbsp;AbstractExample&nbsp;Must&nbsp;have&nbsp;the&nbsp;Implementation&nbsp;in&nbsp;the&nbsp;derived&nbsp;class&nbsp;of&nbsp;''AbstractClass''</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">public</span>&nbsp;<span class="Modifier">override</span>&nbsp;<span class="ValueType">void</span>&nbsp;AbstractExample()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Abstract&nbsp;Method&nbsp;Implemented."</span>);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadKey();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table.code, table.spec, table.results, table.compile, table.summary
+{
+    margin-left: 4em;
+    border: 1px solid #000000;
+    padding: 4px;
+}
+
+table.code
+{
+    background-color: #e5e5e5;
+}
+
+table.spec
+{
+    background-color: #aaddff;
+}
+
+table.results
+{
+    background-color: #aaeeaa;
+}
+
+table.compile
+{
+    background-color: #ffaaaa;
+}
+
+table.summary
+{
+    background-color: #ffffff;
+}
+
+div.code, div.output
+{
+  border-right: white 2px ridge; 
+  padding-right: 10px; 
+  border-top: white 2px ridge; 
+  padding-left: 10px; 
+  font-size: 10pt; 
+  padding-bottom: 10px; 
+  margin: 10px; 
+  border-left: white 2px ridge; 
+  padding-top: 10px; 
+  border-bottom: white 2px ridge; 
+  font-family: courier new; 
+  background-color: #e5e5e5;
+}
+
+/* For code snippets */
+
+span.Keyword,span.Linq,span.ReferenceType,span.ValueType,span.Modifier,span.Statement,
+span.MethodParameter,span.Namespace,span.DataType,span.Function,span.Method,
+span.Object,span.Operator,span.Property,span.SysTable,span.SysSproc,
+span.GlobalVariable,span.ReservedKeyword,span.SystemFunction,span.Type,
+span.PreProcessorDirective, span.Element
+{
+    color: #0000cc
+}
+
+span.BlockComment,span.XmlComment,span.InlineComment,span.JavaDoc
+{
+    color: green
+}
+
+span.String
+{
+    color: black
+}
+
+span.Attention
+{
+    font-weight: bold;
+    color: red
+}
+
+span.Entity
+{
+    color: red
+}
+
+
+    </style>
+</head>
+<body>
+<div class="code">
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        A delegate in C# is similar to a function pointer in C or C++. Using a delegate allows the programmer to encapsulate a reference to a method inside a delegate object. The delegate object can then be passed to code which can call the referenced method, without having to know at compile time which method will be invoked. Unlike function pointers in C or C++, delegates are object-oriented, type-safe, and secure.</p>
+
+
+    <ul class="unordered" style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        <li style="list-style-image: none;">
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                Delegates are like C++ function pointers but are type safe.</p>
+        </li>
+        <li style="list-style-image: none;">
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                Delegates allow methods to be passed as parameters.</p>
+        </li>
+        <li style="list-style-image: none;">
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                Delegates can be used to define callback methods.</p>
+        </li>
+        <li style="list-style-image: none;">
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                Delegates can be chained together; for example, multiple methods can be called on a single event.</p>
+        </li>
+        <li style="list-style-image: none;">
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                Methods do not have to match the delegate type exactly. For more information, see<span class="Apple-converted-space">&nbsp;</span><a href="https://msdn.microsoft.com/en-us/library/ms173174.aspx" style="text-decoration: none; color: rgb(0, 112, 159);">Using Variance in Delegates (C# and Visual Basic)</a>.</p>
+        </li>
+        <li style="list-style-image: none;">
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                C# version 2.0 introduced the concept of<span class="Apple-converted-space">&nbsp;</span><a href="https://msdn.microsoft.com/en-us/library/0yw3tz5k.aspx" style="text-decoration: none; color: rgb(0, 112, 159);">Anonymous Methods</a>, which allow code blocks to be passed as parameters in place of a separately defined method. C# 3.0 introduced lambda expressions as a more concise way of writing inline code blocks. Both anonymous methods and lambda expressions (in certain contexts) are compiled to delegate types. Together, these features are now known as anonymous functions. For more information about lambda expressions, see<span class="Apple-converted-space">&nbsp;</span><a href="https://msdn.microsoft.com/en-us/library/bb882516.aspx" style="text-decoration: none; color: rgb(0, 112, 159);">Anonymous Functions (C# Programming Guide)</a>.</p>
+        </li>
+    </ul>
+
+
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        &nbsp;</p>
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        A delegate declaration defines a type that encapsulates a method with a particular set of arguments and return type. For static methods, a delegate object encapsulates the method to be called. For instance methods, a delegate object encapsulates both an instance and a method on the instance. If you have a delegate object and an appropriate set of arguments, you can invoke the delegate with the arguments.</p>
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        An interesting and useful property of a delegate is that it does not know or care about the class of the object that it references. Any object will do; all that matters is that the method&#39;s argument types and return type match the delegate&#39;s. This makes delegates perfectly suited for &quot;anonymous&quot; invocation.</p>
+    <blockquote class="dtBlock" style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        <b class="le">Note&nbsp;&nbsp;&nbsp;</b>Delegates run under the caller&#39;s security permissions, not the declarer&#39;s permissions.</blockquote>
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        This tutorial includes two examples:</p>
+    <ul style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;" type="disc">
+        <li>Example 1 shows how to declare, instantiate, and call a delegate.</li>
+        <li>Example 2 shows how to combine two delegates.</li>
+    </ul>
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        In addition, it discusses the following topics:</p>
+    <ul style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;" type="disc">
+        <li>Delegates and Events</li>
+        <li>Delegates vs. Interfaces</li>
+    </ul>
+    <p>
+        Example:</p>
+    <p>
+        <a href="http://www.tutorialspoint.com/csharp/csharp_delegates.htm">http://www.tutorialspoint.com/csharp/csharp_delegates.htm</a></p>
+    <p>
+        &nbsp;</p>
+    <pre class="prettyprint notranslate tryit prettyprinted" style="box-sizing: border-box; font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; padding: 5px; margin: 0px 0px 10px; border-radius: 0px; width: 604px; line-height: 16px; border: 1px solid rgb(214, 214, 214); font-size: 13px; overflow: auto; min-height: 37px; color: rgb(49, 49, 49); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; cursor: default; background: rgb(238, 238, 238) url('') no-repeat right top !important;"><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">using</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">System</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">;</span><span class="pln" style="box-sizing: border-box;">
+
+</span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">delegate</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">NumberChanger</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> n</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">);</span><span class="pln" style="box-sizing: border-box;">
+</span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">namespace</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">DelegateAppl</span><span class="pln" style="box-sizing: border-box;">
+</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="box-sizing: border-box;">
+   </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">class</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">TestDelegate</span><span class="pln" style="box-sizing: border-box;">
+   </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">static</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> num </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">=</span><span class="pln" style="box-sizing: border-box;"> </span><span class="lit" style="box-sizing: border-box; color: rgb(0, 102, 102);">10</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">;</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">public</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">static</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">AddNum</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> p</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="box-sizing: border-box;">
+         num </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">+=</span><span class="pln" style="box-sizing: border-box;"> p</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">;</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">return</span><span class="pln" style="box-sizing: border-box;"> num</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">;</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">}</span><span class="pln" style="box-sizing: border-box;">
+
+      </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">public</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">static</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">MultNum</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> q</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="box-sizing: border-box;">
+         num </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">*=</span><span class="pln" style="box-sizing: border-box;"> q</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">;</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">return</span><span class="pln" style="box-sizing: border-box;"> num</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">;</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">}</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">public</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">static</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">int</span><span class="pln" style="box-sizing: border-box;"> getNum</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">()</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">return</span><span class="pln" style="box-sizing: border-box;"> num</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">;</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">}</span><span class="pln" style="box-sizing: border-box;">
+
+      </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">static</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">void</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">Main</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">string</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">[]</span><span class="pln" style="box-sizing: border-box;"> args</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">)</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">{</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="com" style="box-sizing: border-box; color: rgb(136, 0, 0);">//create delegate instances</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">NumberChanger</span><span class="pln" style="box-sizing: border-box;"> nc1 </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">=</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">new</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">NumberChanger</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">AddNum</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">);</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">NumberChanger</span><span class="pln" style="box-sizing: border-box;"> nc2 </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">=</span><span class="pln" style="box-sizing: border-box;"> </span><span class="kwd" style="box-sizing: border-box; color: rgb(0, 0, 136);">new</span><span class="pln" style="box-sizing: border-box;"> </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">NumberChanger</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">MultNum</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">);</span><span class="pln" style="box-sizing: border-box;">
+         
+         </span><span class="com" style="box-sizing: border-box; color: rgb(136, 0, 0);">//calling the methods using the delegate objects</span><span class="pln" style="box-sizing: border-box;">
+         nc1</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="lit" style="box-sizing: border-box; color: rgb(0, 102, 102);">25</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">);</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">Console</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">WriteLine</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="str" style="box-sizing: border-box; color: rgb(0, 136, 0);">&quot;Value of Num: {0}&quot;</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">,</span><span class="pln" style="box-sizing: border-box;"> getNum</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">());</span><span class="pln" style="box-sizing: border-box;">
+         nc2</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="lit" style="box-sizing: border-box; color: rgb(0, 102, 102);">5</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">);</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">Console</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">WriteLine</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">(</span><span class="str" style="box-sizing: border-box; color: rgb(0, 136, 0);">&quot;Value of Num: {0}&quot;</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">,</span><span class="pln" style="box-sizing: border-box;"> getNum</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">());</span><span class="pln" style="box-sizing: border-box;">
+         </span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">Console</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">.</span><span class="typ" style="box-sizing: border-box; color: rgb(127, 0, 85);">ReadKey</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">();</span><span class="pln" style="box-sizing: border-box;">
+      </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">}</span><span class="pln" style="box-sizing: border-box;">
+   </span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">}</span><span class="pln" style="box-sizing: border-box;">
+</span><span class="pun" style="box-sizing: border-box; color: rgb(102, 102, 0);">}</span></pre>
+    <p>
+        &nbsp;</p>
+    <h4 class="dtH4" style="color: rgb(0, 0, 0); font-size: 1.077em; font-family: &quot;Segoe UI Semibold&quot;, &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-weight: normal; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Example 1</h4>
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        The following example illustrates declaring, instantiating, and using a delegate. The<span class="Apple-converted-space">&nbsp;</span><code class="ce">BookDB</code><span class="Apple-converted-space">&nbsp;</span>class encapsulates a bookstore database that maintains a database of books. It exposes a method<span class="Apple-converted-space">&nbsp;</span><code class="ce">ProcessPaperbackBooks</code>, which finds all paperback books in the database and calls a delegate for each one. The<span class="Apple-converted-space">&nbsp;</span><b>delegate</b><span class="Apple-converted-space">&nbsp;</span>type used is called<span class="Apple-converted-space">&nbsp;</span><code class="ce">ProcessBookDelegate</code>. The<span class="Apple-converted-space">&nbsp;</span><code class="ce">Test</code><span class="Apple-converted-space">&nbsp;</span>class uses this class to print out the titles and average price of the paperback books.</p>
+    <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px; font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+        The use of delegates promotes good separation of functionality between the bookstore database and the client code. The client code has no knowledge of how the books are stored or how the bookstore code finds paperback books. The bookstore code has no knowledge of what processing is done on the paperback books after it finds them.</p>
+    <div id="code-snippet-1" class="codeSnippetContainer" style="min-width: 0px; clear: both; color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;" xmlns="">
+        <div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+            <div class="codeSnippetToolBar" style="width: auto; height: auto;">
+                <div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+                </div>
+            </div>
+                   <div class="code">
+<span class="InlineComment">// bookstore.cs</span><br />
+<span class="Namespace">using</span> System;<br />
+<br />
+<span class="InlineComment">// A set of classes for handling a bookstore:</span><br />
+<span class="Namespace">namespace</span> Bookstore <br />
+{<br />
+   <span class="Namespace">using</span> System.Collections;<br />
+<br />
+   <span class="InlineComment">// Describes a book in the book list:</span><br />
+   <span class="Modifier">public</span> <span class="ValueType">struct</span> Book<br />
+   {<br />
+      <span class="Modifier">public</span> <span class="ReferenceType">string</span> Title;        <span class="InlineComment">// Title of the book.</span><br />
+      <span class="Modifier">public</span> <span class="ReferenceType">string</span> Author;       <span class="InlineComment">// Author of the book.</span><br />
+      <span class="Modifier">public</span> <span class="ValueType">decimal</span> Price;       <span class="InlineComment">// Price of the book.</span><br />
+      <span class="Modifier">public</span> <span class="ValueType">bool</span> Paperback;      <span class="InlineComment">// Is it paperback?</span><br />
+<br />
+      <span class="Modifier">public</span> Book(<span class="ReferenceType">string</span> title, <span class="ReferenceType">string</span> author, <span class="ValueType">decimal</span> price, <span class="ValueType">bool</span> paperBack)<br />
+      {<br />
+         Title = title;<br />
+         Author = author;<br />
+         Price = price;<br />
+         Paperback = paperBack;<br />
+      }<br />
+   }<br />
+<br />
+   <span class="InlineComment">// Declare a delegate type for processing a book:</span><br />
+   <span class="Modifier">public</span> <span class="ReferenceType">delegate</span> <span class="ValueType">void</span> ProcessBookDelegate(Book book);<br />
+<br />
+   <span class="InlineComment">// Maintains a book database.</span><br />
+   <span class="Modifier">public</span> <span class="ReferenceType">class</span> BookDB<br />
+   {<br />
+      <span class="InlineComment">// List of all books in the database:</span><br />
+      ArrayList list = <span class="Keyword">new</span> ArrayList();   <br />
+<br />
+      <span class="InlineComment">// Add a book to the database:</span><br />
+      <span class="Modifier">public</span> <span class="ValueType">void</span> AddBook(<span class="ReferenceType">string</span> title, <span class="ReferenceType">string</span> author, <span class="ValueType">decimal</span> price, <span class="ValueType">bool</span> paperBack)<br />
+      {<br />
+         list.Add(<span class="Keyword">new</span> Book(title, author, price, paperBack));<br />
+      }<br />
+<br />
+      <span class="InlineComment">// Call a passed-in delegate on each paperback book to process it: </span><br />
+      <span class="Modifier">public</span> <span class="ValueType">void</span> ProcessPaperbackBooks(ProcessBookDelegate processBook)<br />
+      {<br />
+         <span class="Statement">foreach</span> (Book b <span class="Statement">in</span> list) <br />
+         {<br />
+            <span class="Statement">if</span> (b.Paperback)<br />
+            <span class="InlineComment">// Calling the delegate:</span><br />
+               processBook(b);<br />
+         }<br />
+      }<br />
+   }<br />
+}<br />
+<br />
+<span class="InlineComment">// Using the Bookstore classes:</span><br />
+<span class="Namespace">namespace</span> BookTestClient<br />
+{<br />
+   <span class="Namespace">using</span> Bookstore;<br />
+<br />
+   <span class="InlineComment">// Class to total and average prices of books:</span><br />
+   <span class="ReferenceType">class</span> PriceTotaller<br />
+   {<br />
+      <span class="ValueType">int</span> countBooks = 0;<br />
+      <span class="ValueType">decimal</span> priceBooks = 0.0m;<br />
+<br />
+      <span class="Modifier">internal</span> <span class="ValueType">void</span> AddBookToTotal(Book book)<br />
+      {<br />
+         countBooks += 1;<br />
+         priceBooks += book.Price;<br />
+      }<br />
+<br />
+      <span class="Modifier">internal</span> <span class="ValueType">decimal</span> AveragePrice()<br />
+      {<br />
+         <span class="Statement">return</span> priceBooks / countBooks;<br />
+      }<br />
+   }<br />
+<br />
+   <span class="InlineComment">// Class to test the book database:</span><br />
+   <span class="ReferenceType">class</span> Test<br />
+   {<br />
+      <span class="InlineComment">// Print the title of the book.</span><br />
+      <span class="Modifier">static</span> <span class="ValueType">void</span> PrintTitle(Book b)<br />
+      {<br />
+         Console.WriteLine(<span class="String">"   {0}"</span>, b.Title);<br />
+      }<br />
+<br />
+      <span class="InlineComment">// Execution starts here.</span><br />
+      <span class="Modifier">static</span> <span class="ValueType">void</span> Main()<br />
+      {<br />
+         BookDB bookDB = <span class="Keyword">new</span> BookDB();<br />
+<br />
+         <span class="InlineComment">// Initialize the database with some books:</span><br />
+         AddBooks(bookDB);      <br />
+<br />
+         <span class="InlineComment">// Print all the titles of paperbacks:</span><br />
+         Console.WriteLine(<span class="String">"Paperback Book Titles:"</span>);<br />
+         <span class="InlineComment">// Create a new delegate object associated with the static </span><br />
+         <span class="InlineComment">// method Test.PrintTitle:</span><br />
+         bookDB.ProcessPaperbackBooks(<span class="Keyword">new</span> ProcessBookDelegate(PrintTitle));<br />
+<br />
+         <span class="InlineComment">// Get the average price of a paperback by using</span><br />
+         <span class="InlineComment">// a PriceTotaller object:</span><br />
+         PriceTotaller totaller = <span class="Keyword">new</span> PriceTotaller();<br />
+         <span class="InlineComment">// Create a new delegate object associated with the nonstatic </span><br />
+         <span class="InlineComment">// method AddBookToTotal on the object totaller:</span><br />
+         bookDB.ProcessPaperbackBooks(<span class="Keyword">new</span> ProcessBookDelegate(totaller.AddBookToTotal));<br />
+         Console.WriteLine(<span class="String">"Average Paperback Book Price: ${0:#.##}"</span>,<br />
+            totaller.AveragePrice());<br />
+      }<br />
+<br />
+      <span class="InlineComment">// Initialize the book database with some test books:</span><br />
+      <span class="Modifier">static</span> <span class="ValueType">void</span> AddBooks(BookDB bookDB)<br />
+      {<br />
+         bookDB.AddBook(<span class="String">"The C Programming Language"</span>, <br />
+            <span class="String">"Brian W. Kernighan and Dennis M. Ritchie"</span>, 19.95m, <span class="Keyword">true</span>);<br />
+         bookDB.AddBook(<span class="String">"The Unicode Standard 2.0"</span>, <br />
+            <span class="String">"The Unicode Consortium"</span>, 39.95m, <span class="Keyword">true</span>);<br />
+         bookDB.AddBook(<span class="String">"The MS-DOS Encyclopedia"</span>, <br />
+            <span class="String">"Ray Duncan"</span>, 129.95m, <span class="Keyword">false</span>);<br />
+         bookDB.AddBook(<span class="String">"Dogbert's Clues for the Clueless"</span>, <br />
+            <span class="String">"Scott Adams"</span>, 12.00m, <span class="Keyword">true</span>);<br />
+      }<br />
+   }<br />
+}
+</div>
+        </div>
+    </div>
+    <h4 class="dtH4" style="color: rgb(0, 0, 0); font-size: 1.077em; font-family: &quot;Segoe UI Semibold&quot;, &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-weight: normal; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Output</h4>
+    <div id="code-snippet-2" class="codeSnippetContainer" style="min-width: 0px; clear: both; color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;" xmlns="">
+        <div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+        </div>
+        <div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+            <div class="codeSnippetToolBar" style="width: auto; height: auto;">
+                <div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+                </div>
+            </div>
+            <div id="CodeSnippetContainerCode_6927ce00-b746-4c52-b51c-9686767d2f72" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+                <div style="padding: 0px; margin: 0px; color: black;">
+                    <pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">Paperback Book Titles:
+   The C Programming Language
+   The Unicode Standard 2.0
+   Dogbert&#39;s Clues for the Clueless
+Average Paperback Book Price: $23.97
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4 class="dtH4" style="color: rgb(0, 0, 0); font-size: 1.077em; font-family: &quot;Segoe UI Semibold&quot;, &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-weight: normal; margin: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Code Discussion</h4>
+    <ul style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: 17.55px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;" type="disc">
+        <li><b>Declaring a delegate&nbsp;&nbsp;&nbsp;</b>The following statement:<div id="code-snippet-3" class="codeSnippetContainer" style="min-width: 0px; clear: both;" xmlns="">
+            <div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+            </div>
+            <div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+                <div class="codeSnippetToolBar" style="width: auto; height: auto;">
+                    <div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+                    </div>
+                </div>
+                <div id="CodeSnippetContainerCode_09f9cd07-318f-4578-8981-d2022c3be009" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+                    <div style="padding: 0px; margin: 0px; color: black;">
+                        <pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">public delegate void ProcessBookDelegate(Book book);
+</pre>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                declares a new delegate type. Each delegate type describes the number and types of the arguments, and the type of the return value of methods that it can encapsulate. Whenever a new set of argument types or return value type is needed, a new delegate type must be declared.</p>
+        </li>
+        <li><b>Instantiating a delegate&nbsp;&nbsp;&nbsp;</b>Once a delegate type has been declared, a delegate object must be created and associated with a particular method. Like all other objects, a new delegate object is created with a<span class="Apple-converted-space">&nbsp;</span><b>new</b><span class="Apple-converted-space">&nbsp;</span>expression. When creating a delegate, however, the argument passed to the<b>new</b><span class="Apple-converted-space">&nbsp;</span>expression is special — it is written like a method call, but without the arguments to the method.<p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+            The following statement:</p>
+            <div id="code-snippet-4" class="codeSnippetContainer" style="min-width: 0px; clear: both;" xmlns="">
+                <div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+                </div>
+                <div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+                    <div class="codeSnippetToolBar" style="width: auto; height: auto;">
+                        <div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+                        </div>
+                    </div>
+                    <div id="CodeSnippetContainerCode_75f9c257-37ca-4f21-a4bf-fab405820f9d" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+                        <div style="padding: 0px; margin: 0px; color: black;">
+                            <pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">bookDB.ProcessPaperbackBooks(new ProcessBookDelegate(PrintTitle));
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                creates a new delegate object associated with the static method<span class="Apple-converted-space">&nbsp;</span><code class="ce">Test.PrintTitle</code>. The following statement:</p>
+            <div id="code-snippet-5" class="codeSnippetContainer" style="min-width: 0px; clear: both;" xmlns="">
+                <div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+                </div>
+                <div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+                    <div class="codeSnippetToolBar" style="width: auto; height: auto;">
+                        <div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+                        </div>
+                    </div>
+                    <div id="CodeSnippetContainerCode_ed924f5e-479f-43f5-b8fa-748202b0ef39" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+                        <div style="padding: 0px; margin: 0px; color: black;">
+                            <pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">bookDB.ProcessPaperbackBooks(new 
+   ProcessBookDelegate(totaller.AddBookToTotal));
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                creates a new delegate object associated with the nonstatic method<span class="Apple-converted-space">&nbsp;</span><code class="ce">AddBookToTotal</code><span class="Apple-converted-space">&nbsp;</span>on the object<span class="Apple-converted-space">&nbsp;</span><code class="ce">totaller</code>. In both cases, this new delegate object is immediately passed to the<span class="Apple-converted-space">&nbsp;</span><code class="ce">ProcessPaperbackBooks</code><span class="Apple-converted-space">&nbsp;</span>method.</p>
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                Note that once a delegate is created, the method it is associated with never changes — delegate objects are immutable.</p>
+        </li>
+        <li><b>Calling a delegate&nbsp;&nbsp;&nbsp;</b>Once a delegate object is created, the delegate object is typically passed to other code that will call the delegate. A delegate object is called by using the name of the delegate object, followed by the parenthesized arguments to be passed to the delegate. An example of a delegate call is:<div id="code-snippet-6" class="codeSnippetContainer" style="min-width: 0px; clear: both;" xmlns="">
+            <div class="codeSnippetContainerTabs" style="vertical-align: middle; height: 23px; position: relative; z-index: 1;">
+            </div>
+            <div class="codeSnippetContainerCodeContainer" style="border: 1px solid rgb(147, 147, 147); clear: both; margin-bottom: 12px; position: relative; top: -1px;">
+                <div class="codeSnippetToolBar" style="width: auto; height: auto;">
+                    <div class="codeSnippetToolBarText" style="float: right; top: -8px; position: relative; width: auto; padding-left: 0px; padding-right: 0px; height: 0px; vertical-align: top; background-color: rgb(255, 255, 255);">
+                    </div>
+                </div>
+                <div id="CodeSnippetContainerCode_f74843dc-2cfe-4c5b-962f-8d030c555cb5" class="codeSnippetContainerCode" dir="ltr" style="width: auto; margin: 0px; padding: 10px 21px;">
+                    <div style="padding: 0px; margin: 0px; color: black;">
+                        <pre style="padding: 5px; margin: 0px; font-style: normal; font-weight: normal; overflow: auto; word-wrap: normal; font-family: Consolas, Courier, monospace !important;">processBook(b);
+</pre>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <p style="color: rgb(42, 42, 42); margin-top: 0px; margin-bottom: 0px; padding-bottom: 15px; line-height: 18px;">
+                A delegate can either be called synchronously, as in this example, or asynchronously by using<span class="Apple-converted-space">&nbsp;</span><a href="https://msdn.microsoft.com/en-in/library/system.windows.forms.control.begininvoke(v=vs.71).aspx" style="text-decoration: none; color: rgb(0, 112, 159);">BeginInvoke</a><span class="Apple-converted-space">&nbsp;</span>and<span class="Apple-converted-space">&nbsp;</span><a href="https://msdn.microsoft.com/en-in/library/system.windows.forms.control.endinvoke(v=vs.71).aspx" style="text-decoration: none; color: rgb(0, 112, 159);">EndInvoke</a><span class="Apple-converted-space">&nbsp;</span>methods.</p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
